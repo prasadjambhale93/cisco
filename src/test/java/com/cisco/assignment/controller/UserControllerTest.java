@@ -1,10 +1,8 @@
 package com.cisco.assignment.controller;
 
-import com.cisco.assignment.exception.ApiRequestException;
 import com.cisco.assignment.model.User;
 import com.cisco.assignment.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,10 +16,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 @ExtendWith(SpringExtension.class)
@@ -39,7 +35,7 @@ class UserControllerTest {
 
 
     @BeforeEach
-    void setUp(){
+    void setUp() {
         users = new ArrayList();
         users.add(user);
     }
